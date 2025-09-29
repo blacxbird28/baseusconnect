@@ -1,0 +1,117 @@
+.header {
+  .menu-dropdown {
+    position: relative;
+    &:hover {
+      div,
+      ul {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &__list {
+      position: absolute;
+      top: 40px;
+      left: -150px;
+      opacity: 0;
+      visibility: hidden;
+      overflow: hidden;
+      padding: 15px 20px;
+      border-radius: 15px;
+      transition: .3s ease all;/* width */
+      &-inner {
+        width: 100%;
+        height: 100%;
+        overflow-y: scroll;
+        ::-webkit-scrollbar,
+        ::-moz-scrollbar {
+          width: 5px;
+        }
+
+        ::-webkit-scrollbar-track,
+        ::-moz-scrollbar-track {
+          background-color: darkgrey;
+        }
+
+        ::-webkit-scrollbar-thumb,
+        ::-moz-scrollbar-thumb {
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+  }
+
+  .menu-toggle {
+    ul {
+      position: fixed;
+      right: -100%;
+      transition: .3s ease all;
+      background: #F7F7F7 url('../../public/images/bg-menu.png') center/cover no-repeat;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+
+    input {
+      position: absolute;
+      cursor: pointer;
+      opacity: 0;
+      width: 40px;
+      height: 30px;
+      z-index: 2; /* in order to place the checkbox over the hamburguer */
+      -webkit-touch-callout: none;
+      display: block;
+    }
+
+    span:first-child {
+      transform-origin: 0% 0%;
+    }
+
+    span:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+
+    span {
+      top: 5px;
+      width: 30px;
+      height: 4px;
+      margin-bottom: 5px; /* create some spacing between the span elements. */
+      position: relative; /* allow for positioning changes in relation to the parent div.*/
+      background: #fff;
+      border-radius: 3px;
+      z-index: 1; /* ensure that the span element is under the checkbox */
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+      transform-origin: 4px 0px; /* set to 4px 0px to specify the center of rotation for the transform property above. */
+      display: block;
+    }
+
+    input:checked ~ span {
+      opacity: 1;
+      transform: rotate(45deg) translate(-1px, -1px);
+      background: #232323;
+    }
+
+    input:checked ~ span:nth-last-child(3) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    input:checked ~ span:nth-last-child(2) {
+      transform: rotate(-45deg) translate(2px, -1px);
+    }
+
+    input:checked ~ ul {
+      right: 0;
+    }
+  }
+}
+
+.hide-overlay {
+  transform: translateX(200%);
+  transition: .5s ease all;
+}
+
+.menu-open {
+  transform: translateX(0);
+  transition: .5s ease all;
+}

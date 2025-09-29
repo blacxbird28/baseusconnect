@@ -1,0 +1,157 @@
+@use 'mixins' as *;
+@use '../themes/index' as *;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+body {
+  font-family: 'Roboto', serif;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #fff100 #fff;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #fff;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #fff100;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border: 3px solid #fff;  /* creates padding around scroll thumb */
+}
+
+.desktop-only {
+  display: block;
+
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.mobile-only {
+  display: none;
+
+  @include tablet {
+    display: block !important;
+  }
+}
+
+.container {
+  @media (min-width: 1536px) {
+    max-width: 1280px;
+  }
+
+  @include tablet {
+    width: 90%;
+  }
+}
+
+.font-space {
+  font-family: 'Roboto', serif;
+}
+
+.text-orange {
+  color: $orange;
+}
+
+.text-green {
+  color: $green;
+}
+
+.text-brown {
+  color: $brown;
+}
+
+.text-gray-1 {
+  color: $gray1;
+}
+
+.text-gray-2 {
+  color: $gray2;
+}
+
+.text-danger {
+  color: red;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-orange {
+  background-color: $orange;
+}
+
+.bg-green {
+  background-color: $green;
+}
+
+.footer {
+  background: url('../../public/images/bg-gradasi-10.jpg') top/cover no-repeat;
+}
+
+#submit-btn {
+  &:disabled {
+    background-color: #ccc; /* Disabled state background */
+    color: #666; /* Disabled text color */
+    cursor: not-allowed; /* Change cursor to indicate disabled */
+    opacity: 0.6; /* Reduce opacity for a disabled look */
+  }
+}
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+}
+
+.fixed-center {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+}
+
+.hide-popup {
+  transition: .3s ease all;
+  transform: translate(-50%, -400%);
+}
+
+.hide-overlay {
+  transition: .3s ease all;
+  transform: translateY(100%);
+}
+
+.show-popup {
+  transform: translate(-50%, -50%) !important;
+}
+
+.show {
+  transform: translateY(0) !important;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+iframe {
+  width: 100%;
+}
+
+.bg-gradient-green {
+  background: url('../../public/images/bg-gradient-green.png') center/cover no-repeat;
+}
+
+.bg-gradient-orange {
+  background: url('../../public/images/bg-gradient-orange.png') center/cover no-repeat;
+}

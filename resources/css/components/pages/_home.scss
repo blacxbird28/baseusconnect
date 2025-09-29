@@ -1,0 +1,129 @@
+@use '../helpers/index' as *;
+@use '../themes/index' as *;
+
+.home {
+  &__top {
+    &-bg {
+        background: url('../../public/images/bg-content-top.png') top/cover no-repeat;
+
+        &-mobile {
+          background: url('../../public/images/bg-content-top.png') top/100% no-repeat;
+        }
+    }
+
+    &-gradient {
+        background: #FFF;
+        background: linear-gradient(0deg,rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 20%, rgba(255, 242, 0, 1) 100%);
+    }
+  }
+
+  &__info {
+    // background: url('../../public/images/bg-about.png') 0 80%/cover no-repeat;
+    // &-bg {
+    // }
+  }
+
+  &__buddies {
+    background: #FFF;
+    background: linear-gradient(0deg,rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 60%, rgba(255, 242, 0, 1) 100%);
+
+    &-bg-white {
+      background: linear-gradient(180deg,rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    }
+
+    .image-hover-sabian {
+      background: url('../../public/images/content-sabian-new.png') bottom center/contain no-repeat;
+    }
+
+    .image-hover-sabian:hover {
+      animation: changeImagesSabian 1.5s steps(1, end) infinite;
+    }
+
+    @keyframes changeImagesSabian {
+      0% {
+        background: url('../../public/images/content-sabian-new-1.png') bottom center/contain no-repeat;
+      }
+      33.3% {
+        background: url('../../public/images/content-sabian-new-2.png') bottom center/contain no-repeat;
+      }
+      66.6% {
+        background: url('../../public/images/content-sabian-new-3.png') bottom center/contain no-repeat;
+      }
+      100% {
+        background: url('../../public/images/content-sabian-new-3.png') bottom center/contain no-repeat;
+      }
+    }
+
+
+    .image-hover-vior {
+      background: url('../../public/images/content-vior-new.png') bottom center/contain no-repeat;
+    }
+
+    .image-hover-vior:hover {
+      animation: changeImagesVior 1.5s steps(1, end) infinite;
+    }
+
+    @keyframes changeImagesVior {
+      0% {
+        background: url('../../public/images/content-vior-new.png') bottom center/contain no-repeat;
+      }
+      33.3% {
+        background: url('../../public/images/content-vior-new-2.png') bottom center/contain no-repeat;
+      }
+      66.6% {
+        background: url('../../public/images/content-vior-new-3.png') bottom center/contain no-repeat;
+      }
+      100% {
+        background: url('../../public/images/content-vior-new-3.png') bottom center/contain no-repeat;
+      }
+    }
+  }
+
+  &__community {
+    background: #FFF;
+    background: linear-gradient(0deg,rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 60%, rgba(255, 242, 0, 1) 100%);
+  }
+
+  &__mechanism {
+    background: url('../../public/images/bg-mechanism.png') top/cover no-repeat;
+
+    .g-recaptcha {
+      > div {
+        margin: 0 auto
+      }
+    }
+  }
+
+  &__redeem {
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20%;
+      height: 100%;
+      background: url('../../public/images/bg-half-circle-left.png') top center/contain no-repeat;
+    }
+
+    &::after {
+      left: auto;
+      right: 0;
+      background: url('../../public/images/bg-half-circle-right.png') top center/contain no-repeat;
+    }
+  }
+
+  &__leaderboard {
+
+  }
+
+  &__connect {
+    background: rgba(242, 249, 182, 0.2)
+  }
+
+  &__awards {
+    background: #FFF;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, rgba(255, 241, 0, .5) 100%);
+  }
+}

@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://db.onlinewebfonts.com/c/1a0c4640a632f0d6577d25b3a1f9d751?family=Owners+TRIAL+Wide+XBlack');
+@import url('https://db.onlinewebfonts.com/c/342a9c5ca64447d6594b0d75b782f728?family=Owners+TRIAL+Wide+Medium');
+@import "components/index.scss";
+
+@font-face {
+    font-family: 'ownerstrialblack';
+    src: url('../../public/fonts/ownerstrial-black.woff2') format('woff2'),
+         url('../../public/fonts/ownerstrial-black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ownerstrialbold';
+    src: url('../../public/fonts/ownerstrial-bold.woff2') format('woff2'),
+         url('../../public/fonts/ownerstrial-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ownerstrialmedium';
+    src: url('../../public/fonts/ownerstrial-medium.woff2') format('woff2'),
+         url('../../public/fonts/ownerstrial-medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'owners_trial_xnarrowxblack';
+    src: url('../../public/fonts/ownerstrialxnarrow-xblack.woff2') format('woff2'),
+         url('../../public/fonts/ownerstrialxnarrow-xblack.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'owners_trial_xwideblack';
+    src: url('../../public/fonts/ownerstrialxwide-black.woff2') format('woff2'),
+         url('../../public/fonts/ownerstrialxwide-black.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'owners_trial_xwidexblack';
+    src: url('../../public/fonts/ownerstrialxwide-xblack.woff2') format('woff2'),
+         url('../../public/fonts/ownerstrialxwide-xblack.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

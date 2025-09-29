@@ -1,0 +1,30 @@
+@use '../helpers/index' as *;
+@use '../themes/index' as *;
+
+.registrations {
+  &__top {
+    background: url('../../public/images/bg-gradasi-4.jpg') top/cover no-repeat;
+  }
+
+  &__racepack {
+    background: url('../../public/images/bg-gradasi-2.jpg') top/cover no-repeat;
+
+    &-list {
+      li {
+        &::before {
+          position: relative;
+          top: 5px;
+          display: inline-block;
+          content: url('../../public/images/icon-checklist.png');
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  &__form {
+    background: url('../../public/images/bg-white-1.jpg') top/cover no-repeat;
+  }
+}

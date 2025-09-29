@@ -1,0 +1,21 @@
+.modal #products__show-images {
+  height: 150px;
+}
+
+.table-responsive {
+  overflow-x: hidden;
+}
+
+.table-responsive.overflow-x {
+  overflow-x: scroll;
+}
+
+.buttons-excel {
+  border-radius: 5px !important;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+  padding: 0.5rem 0.75rem !important;
+  border-radius: 0.5rem !important;
+  margin-left: 10px !important;
+}

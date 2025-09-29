@@ -1,0 +1,23 @@
+.about {
+  &__info {
+    background: #FFF;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 90%, rgba(255, 241, 0, .5) 100%);
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20%;
+      height: 100%;
+      background: url('../../public/images/bg-half-circle-left.png') center/contain no-repeat;
+    }
+
+    &::after {
+      left: auto;
+      right: 0;
+      background: url('../../public/images/bg-half-circle-right.png') center/contain no-repeat;
+    }
+  }
+}
